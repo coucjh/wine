@@ -20,8 +20,8 @@ logger = logging.getLogger(__name__)
 import dvc.api
 
 path = 'data/wine-quality.csv'
-repo = '/Users/jamiecouchman/Documents/source/github.com/coucjh/data-ml'
-version = 'v2'
+repo = 'https://github.com/coucjh/wine'
+version = 'v1'
 
 data_url = dvc.api.get_url(
     path=path,
