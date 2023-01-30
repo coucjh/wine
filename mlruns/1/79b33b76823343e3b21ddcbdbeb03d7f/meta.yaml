@@ -1,0 +1,15 @@
+artifact_uri: file:///Users/jamiecouchman/Documents/source/github.com/coucjh/data-ml/mlruns/1/79b33b76823343e3b21ddcbdbeb03d7f/artifacts
+end_time: 1675094884528
+entry_point_name: ''
+experiment_id: '1'
+lifecycle_stage: active
+run_id: 79b33b76823343e3b21ddcbdbeb03d7f
+run_name: charming-fox-39
+run_uuid: 79b33b76823343e3b21ddcbdbeb03d7f
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1675094883263
+status: 3
+tags: []
+user_id: jamiecouchman
