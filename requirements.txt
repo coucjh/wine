@@ -1,0 +1,8 @@
+setuptools
+scikit-learn
+matplotlib
+pandas
+numpy
+urllib
+mlflow
+logging
