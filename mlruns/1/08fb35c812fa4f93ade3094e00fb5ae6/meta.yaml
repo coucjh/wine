@@ -1,0 +1,15 @@
+artifact_uri: file:///Users/jamiecouchman/Documents/source/github.com/coucjh/data-ml/mlruns/1/08fb35c812fa4f93ade3094e00fb5ae6/artifacts
+end_time: 1675182958930
+entry_point_name: ''
+experiment_id: '1'
+lifecycle_stage: active
+run_id: 08fb35c812fa4f93ade3094e00fb5ae6
+run_name: legendary-bug-405
+run_uuid: 08fb35c812fa4f93ade3094e00fb5ae6
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1675182957637
+status: 3
+tags: []
+user_id: jamiecouchman
