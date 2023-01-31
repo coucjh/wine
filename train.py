@@ -116,5 +116,5 @@ if __name__ == "__main__":
         with open("metrics.txt", 'w') as outfile:
             outfile.write("RMS: %2.1f%%\n" % rmse)
             outfile.write("MAE: %2.1f%%\n" % mae)
-            outfile.write("R@: %2.1f%%\n" % r2)
+            outfile.write("R2: %2.1f%%\n" % r2)
 
