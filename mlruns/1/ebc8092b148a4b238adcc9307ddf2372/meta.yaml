@@ -1,0 +1,15 @@
+artifact_uri: file:///Users/jamiecouchman/Documents/source/github.com/coucjh/data-ml/mlruns/1/ebc8092b148a4b238adcc9307ddf2372/artifacts
+end_time: 1675156805423
+entry_point_name: ''
+experiment_id: '1'
+lifecycle_stage: active
+run_id: ebc8092b148a4b238adcc9307ddf2372
+run_name: crawling-mare-633
+run_uuid: ebc8092b148a4b238adcc9307ddf2372
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1675156805409
+status: 4
+tags: []
+user_id: jamiecouchman

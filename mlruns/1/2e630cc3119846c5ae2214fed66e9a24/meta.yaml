@@ -1,0 +1,15 @@
+artifact_uri: file:///Users/jamiecouchman/Documents/source/github.com/coucjh/data-ml/mlruns/1/2e630cc3119846c5ae2214fed66e9a24/artifacts
+end_time: 1675162448214
+entry_point_name: ''
+experiment_id: '1'
+lifecycle_stage: active
+run_id: 2e630cc3119846c5ae2214fed66e9a24
+run_name: delightful-goat-809
+run_uuid: 2e630cc3119846c5ae2214fed66e9a24
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1675162446846
+status: 3
+tags: []
+user_id: jamiecouchman

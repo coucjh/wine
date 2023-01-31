@@ -12,6 +12,7 @@ import mlflow
 import mlflow.sklearn
 
 import logging
+from io import StringIO
 
 logging.basicConfig(level=logging.WARN)
 logger = logging.getLogger(__name__)
@@ -20,14 +21,22 @@ logger = logging.getLogger(__name__)
 import dvc.api
 
 path = 'data/wine-quality.csv'
-repo = '/Users/jamiecouchman/Documents/source/github.com/coucjh/data-ml'
-version = 'v2'
+repo = 'https://github.com/coucjh/wine'
+version = 'v3'
+# remote = 'myremote'
 
 data_url = dvc.api.get_url(
     path=path,
     repo=repo,
     rev=version
 )
+data_read = dvc.api.read(
+    path=path,
+    repo=repo,
+    rev=version
+)
+data_read = StringIO(data_read)
+print(data_url)
 
 mlflow.set_experiment('data-ml-demo')
 
@@ -44,23 +53,13 @@ if __name__ == "__main__":
         warnings.filterwarnings("ignore")
         np.random.seed(40)
 
-        data = pd.read_csv(data_url, sep=",")
+        data = pd.read_csv(data_read, sep=",", header=0)
 
+        print(data)
         mlflow.log_param('data_url', data_url)
         mlflow.log_param('data_version', version)
         mlflow.log_param('input_rows', data.shape[0])
         mlflow.log_param('input_cols', data.shape[1])
-
-        # # Read the wine-quality csv file from the URL
-        # csv_url = (
-        #     "https://raw.githubusercontent.com/mlflow/mlflow/master/tests/data/winequality-red.csv"
-        # )
-        # try:
-        #     data = pd.read_csv(csv_url, sep=";")
-        # except Exception as e:
-        #     logger.exception(
-        #         "Unable to download training & test CSV, check your internet connection. Error: %s", e
-        #     )
 
         # Split the data into training and test sets. (0.75, 0.25) split.
         train, test = train_test_split(data)
@@ -113,3 +112,9 @@ if __name__ == "__main__":
             mlflow.sklearn.log_model(lr, "model", registered_model_name="ElasticnetWineModel")
         else:
             mlflow.sklearn.log_model(lr, "model")
+
+        with open("metrics.txt", 'w') as outfile:
+            outfile.write("RMS: %2.1f%%\n" % rmse)
+            outfile.write("MAE: %2.1f%%\n" % mae)
+            outfile.write("R@: %2.1f%%\n" % r2)
+

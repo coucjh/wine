@@ -1,0 +1,15 @@
+artifact_uri: file:///Users/jamiecouchman/Documents/source/github.com/coucjh/data-ml/mlruns/1/3d8bbb355be74dbea58f5b42d1908dea/artifacts
+end_time: 1675093869187
+entry_point_name: ''
+experiment_id: '1'
+lifecycle_stage: active
+run_id: 3d8bbb355be74dbea58f5b42d1908dea
+run_name: colorful-koi-58
+run_uuid: 3d8bbb355be74dbea58f5b42d1908dea
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1675093867890
+status: 3
+tags: []
+user_id: jamiecouchman

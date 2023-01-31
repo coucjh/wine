@@ -1,0 +1,8 @@
+setuptools
+scikit-learn
+matplotlib
+pandas
+numpy
+mlflow
+dvc
+dvc-gdrive

@@ -1,0 +1,15 @@
+artifact_uri: file:///Users/jamiecouchman/Documents/source/github.com/coucjh/data-ml/mlruns/1/d2a18d3ec01c4841a673ddab05bea732/artifacts
+end_time: 1675097264590
+entry_point_name: ''
+experiment_id: '1'
+lifecycle_stage: active
+run_id: d2a18d3ec01c4841a673ddab05bea732
+run_name: trusting-toad-323
+run_uuid: d2a18d3ec01c4841a673ddab05bea732
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1675097264580
+status: 4
+tags: []
+user_id: jamiecouchman
