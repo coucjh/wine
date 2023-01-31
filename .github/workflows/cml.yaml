@@ -13,3 +13,5 @@ jobs:
         run: |
           pip install -r requirements.txt
           python train.py  # generate plot.png
+          cat metrics.txt >> report.md
+          cml comment create report.md
