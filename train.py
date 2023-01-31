@@ -22,7 +22,7 @@ import dvc.api
 
 path = 'data/wine-quality.csv'
 repo = 'https://github.com/coucjh/wine'
-version = 'v1'
+version = 'v3'
 # remote = 'myremote'
 
 data_url = dvc.api.get_url(
@@ -60,17 +60,6 @@ if __name__ == "__main__":
         mlflow.log_param('data_version', version)
         mlflow.log_param('input_rows', data.shape[0])
         mlflow.log_param('input_cols', data.shape[1])
-
-        # # Read the wine-quality csv file from the URL
-        # csv_url = (
-        #     "https://raw.githubusercontent.com/mlflow/mlflow/master/tests/data/winequality-red.csv"
-        # )
-        # try:
-        #     data = pd.read_csv(csv_url, sep=";")
-        # except Exception as e:
-        #     logger.exception(
-        #         "Unable to download training & test CSV, check your internet connection. Error: %s", e
-        #     )
 
         # Split the data into training and test sets. (0.75, 0.25) split.
         train, test = train_test_split(data)
