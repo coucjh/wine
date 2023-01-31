@@ -1,0 +1,15 @@
+artifact_uri: file:///Users/jamiecouchman/Documents/source/github.com/coucjh/data-ml/mlruns/1/f453f33cad6b49bfa55f330795b60faa/artifacts
+end_time: 1675163027553
+entry_point_name: ''
+experiment_id: '1'
+lifecycle_stage: active
+run_id: f453f33cad6b49bfa55f330795b60faa
+run_name: useful-hound-509
+run_uuid: f453f33cad6b49bfa55f330795b60faa
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1675163026142
+status: 3
+tags: []
+user_id: jamiecouchman
