@@ -112,3 +112,9 @@ if __name__ == "__main__":
             mlflow.sklearn.log_model(lr, "model", registered_model_name="ElasticnetWineModel")
         else:
             mlflow.sklearn.log_model(lr, "model")
+
+        with open("metrics.txt", 'w') as outfile:
+            outfile.write("RMS: %2.1f%%\n" % rmse)
+            outfile.write("MAE: %2.1f%%\n" % mae)
+            outfile.write("R@: %2.1f%%\n" % r2)
+
