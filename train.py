@@ -12,6 +12,7 @@ import mlflow
 import mlflow.sklearn
 
 import logging
+from io import StringIO
 
 logging.basicConfig(level=logging.WARN)
 logger = logging.getLogger(__name__)
@@ -22,12 +23,20 @@ import dvc.api
 path = 'data/wine-quality.csv'
 repo = 'https://github.com/coucjh/wine'
 version = 'v1'
+# remote = 'myremote'
 
 data_url = dvc.api.get_url(
     path=path,
     repo=repo,
     rev=version
 )
+data_read = dvc.api.read(
+    path=path,
+    repo=repo,
+    rev=version
+)
+data_read = StringIO(data_read)
+print(data_url)
 
 mlflow.set_experiment('data-ml-demo')
 
@@ -44,8 +53,9 @@ if __name__ == "__main__":
         warnings.filterwarnings("ignore")
         np.random.seed(40)
 
-        data = pd.read_csv(data_url, sep=",")
+        data = pd.read_csv(data_read, sep=",", header=0)
 
+        print(data)
         mlflow.log_param('data_url', data_url)
         mlflow.log_param('data_version', version)
         mlflow.log_param('input_rows', data.shape[0])

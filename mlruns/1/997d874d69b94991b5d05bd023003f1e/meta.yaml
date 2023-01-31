@@ -1,0 +1,15 @@
+artifact_uri: file:///Users/jamiecouchman/Documents/source/github.com/coucjh/data-ml/mlruns/1/997d874d69b94991b5d05bd023003f1e/artifacts
+end_time: 1675097277421
+entry_point_name: ''
+experiment_id: '1'
+lifecycle_stage: active
+run_id: 997d874d69b94991b5d05bd023003f1e
+run_name: bold-eel-794
+run_uuid: 997d874d69b94991b5d05bd023003f1e
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1675097277411
+status: 4
+tags: []
+user_id: jamiecouchman

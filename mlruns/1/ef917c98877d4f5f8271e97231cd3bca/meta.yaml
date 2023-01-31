@@ -1,0 +1,15 @@
+artifact_uri: file:///Users/jamiecouchman/Documents/source/github.com/coucjh/data-ml/mlruns/1/ef917c98877d4f5f8271e97231cd3bca/artifacts
+end_time: 1675098420518
+entry_point_name: ''
+experiment_id: '1'
+lifecycle_stage: active
+run_id: ef917c98877d4f5f8271e97231cd3bca
+run_name: magnificent-eel-771
+run_uuid: ef917c98877d4f5f8271e97231cd3bca
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1675098420507
+status: 4
+tags: []
+user_id: jamiecouchman
