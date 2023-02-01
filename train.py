@@ -13,31 +13,9 @@ import mlflow.sklearn
 import pickle
 
 import logging
-from io import StringIO
 
 logging.basicConfig(level=logging.WARN)
 logger = logging.getLogger(__name__)
-
-# Get url from DVC
-import dvc.api
-
-path = 'data/wine-quality.csv'
-repo = 'https://github.com/coucjh/wine'
-version = 'v3'
-# remote = 'myremote'
-
-data_url = dvc.api.get_url(
-    path=path,
-    repo=repo,
-    rev=version
-)
-data_read = dvc.api.read(
-    path=path,
-    repo=repo,
-    rev=version
-)
-data_read = StringIO(data_read)
-print(data_url)
 
 mlflow.set_experiment('data-ml-demo')
 
@@ -54,11 +32,9 @@ if __name__ == "__main__":
         warnings.filterwarnings("ignore")
         np.random.seed(40)
 
-        data = pd.read_csv(data_read, sep=",", header=0)
+        data = pd.read_csv("data/data_raw.csv")
 
         print(data)
-        mlflow.log_param('data_url', data_url)
-        mlflow.log_param('data_version', version)
         mlflow.log_param('input_rows', data.shape[0])
         mlflow.log_param('input_cols', data.shape[1])
 
@@ -117,7 +93,7 @@ if __name__ == "__main__":
         else:
             mlflow.sklearn.log_model(lr, "model")
 
-        with open("metrics.txt", 'w') as outfile:
+        with open("metrics.json", 'w') as outfile:
             outfile.write("RMS: %2.1f%%\n" % rmse)
             outfile.write("MAE: %2.1f%%\n" % mae)
             outfile.write("R2: %2.1f%%\n" % r2)
