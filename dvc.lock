@@ -1,0 +1,28 @@
+schema: '2.0'
+stages:
+  get_data:
+    cmd: python3 get_data.py
+    deps:
+    - path: get_data.py
+      md5: 7a3adb4e90759c97af8119c320f5e1ea
+      size: 468
+    outs:
+    - path: data/data_raw.csv
+      md5: 26435037e0096c90a4799ddd3786a1ef
+      size: 216312
+  train:
+    cmd: python3 train.py
+    deps:
+    - path: data/data_raw.csv
+      md5: 26435037e0096c90a4799ddd3786a1ef
+      size: 216312
+    - path: train.py
+      md5: da4fc977b3e01b33d86763f1ec008d02
+      size: 3357
+    outs:
+    - path: metrics.json
+      md5: 2890cfc4516a118bd884cf9b1d0c7ec7
+      size: 29
+    - path: models/finalized_model.pkl
+      md5: d0b0a64e24b7c59f20ce70acd00a3bbf
+      size: 924

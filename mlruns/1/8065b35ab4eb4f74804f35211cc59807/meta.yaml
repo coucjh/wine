@@ -1,0 +1,15 @@
+artifact_uri: file:///Users/jamiecouchman/Documents/source/github.com/coucjh/data-ml/mlruns/1/8065b35ab4eb4f74804f35211cc59807/artifacts
+end_time: 1675266516967
+entry_point_name: ''
+experiment_id: '1'
+lifecycle_stage: active
+run_id: 8065b35ab4eb4f74804f35211cc59807
+run_name: abundant-shrew-429
+run_uuid: 8065b35ab4eb4f74804f35211cc59807
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1675266515688
+status: 3
+tags: []
+user_id: jamiecouchman
