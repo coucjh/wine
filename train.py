@@ -10,6 +10,7 @@ from sklearn.linear_model import ElasticNet
 from urllib.parse import urlparse
 import mlflow
 import mlflow.sklearn
+import pickle
 
 import logging
 from io import StringIO
@@ -93,6 +94,9 @@ if __name__ == "__main__":
         print("  RMSE: %s" % rmse)
         print("  MAE: %s" % mae)
         print("  R2: %s" % r2)
+
+        filename = 'models/finalized_model.pkl'
+        pickle.dump(lr, open(filename, 'wb'))
 
         mlflow.log_param("alpha", alpha)
         mlflow.log_param("l1_ratio", l1_ratio)
