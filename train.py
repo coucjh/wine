@@ -22,7 +22,7 @@ import dvc.api
 
 path = 'data/wine-quality.csv'
 repo = 'https://github.com/coucjh/wine'
-version = 'v3'
+version = 'v4'
 # remote = 'myremote'
 
 data_url = dvc.api.get_url(
