@@ -1,0 +1,15 @@
+artifact_uri: file:///Users/jamiecouchman/Documents/source/github.com/coucjh/data-ml/mlruns/1/35a36b9792f947878c3911f6a6d822b8/artifacts
+end_time: 1675263401586
+entry_point_name: ''
+experiment_id: '1'
+lifecycle_stage: active
+run_id: 35a36b9792f947878c3911f6a6d822b8
+run_name: masked-elk-94
+run_uuid: 35a36b9792f947878c3911f6a6d822b8
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1675263400005
+status: 3
+tags: []
+user_id: jamiecouchman
